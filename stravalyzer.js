@@ -9,6 +9,10 @@ const fileList = document.getElementById("file-list");
 fileSelect.addEventListener("click", () => fileElem.click());
 ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false);
+  fileElem.addEventListener("change", () => {
+    handleFiles(fileElem.files);
+  });
+  
 });
 
 function preventDefaults(e) {
