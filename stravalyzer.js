@@ -7,12 +7,12 @@ const fileSelect = document.getElementById("fileSelect");
 const fileList = document.getElementById("file-list");
 
 fileSelect.addEventListener("click", () => fileElem.click());
+fileElem.addEventListener("change", () => {
+  handleFiles(fileElem.files);
+});
+
 ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false);
-  fileElem.addEventListener("change", () => {
-    handleFiles(fileElem.files);
-  });
-  
 });
 
 function preventDefaults(e) {
