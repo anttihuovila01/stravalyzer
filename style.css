@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: #EEF0EB;
+  }
+  
+  /* ===== HERO SECTION ===== */
+  #hero-main {
+    background-color: #111111;
+    display: grid;
+    place-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  
+  #hero-h1 {
+    font-size: 2rem;
+    color: #F4F9E9;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+
+  #how-main {
+    background-color: #F4F9E9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #how-h1 {
+    font-size: 2rem;
+    color: #153243;
+    margin-bottom: 20px;
+  }
+  
+  #how-p1,
+  #how-p2 {
+    font-size: 1.1rem;
+    color: #153243;
+    margin: 15px auto;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  #how-link {
+    display: inline-block;
+    margin: 20px auto;
+    font-size: 1rem;
+    color: #284B63;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid #284B63;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #how-link:hover {
+    background-color: #284B63;
+    color: #ffffff;
+  }
+  
+  /* ===== UPLOAD SECTION ===== */
+  #upload-main {
+    background-color: #B4B8AB;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #upload-h1 {
+    font-size: 2rem;
+    color: #111111;
+    margin-bottom: 30px;
+  }
+  
+  .upload-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    height: 150px;
+    padding: 20px;
+    background-color: #fff;
+    transition: border 0.3s;
+  }
+  
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  
+  #fileSelect {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #file-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  /* ===== CHART SECTION ===== */
+  #charts-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #EEF0EB;
+  }
+  
+  
+  #charts-main canvas {
+    flex: 1 1 400px;
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== EXAMPLES SECTION ===== */
+  #examples-main {
+    background-color: #111111;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #examples-h1 {
+    font-size: 2rem;
+    color: #B4B8AB;
+    margin-bottom: 40px;
+  }
+  
+  .flex-examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .flex-examples img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* ===== ABOUT SECTION ===== */
+  #about-main {
+    background-color: #F4F9E9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #about-h1 {
+    font-size: 2rem;
+    color: #153243;
+    margin-bottom: 20px;
+  }
+  
+  #about-p {
+    font-size: 1.2rem;
+    color: #153243;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* ===== CONTACT SECTION ===== */
+  #contact-main {
+    background-color: #EEF0EB;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #contact-h1 {
+    font-size: 2rem;
+    color: #153243;
+    margin-bottom: 20px;
+  }
+  
+  .contact-flex > * {
+    font-size: 1.1rem;
+    color: #153243;
+    margin: 5px 0;
+  }
+  
+  /* ===== RESPONSIVE BREAKPOINTS ===== */
+  @media (min-width: 600px) {
+    #hero-h1, #upload-h1, #examples-h1, #about-h1, #contact-h1 {
+      font-size: 2.5rem;
+    }
+  
+    #about-p, .contact-flex > * {
+      font-size: 1.3rem;
+    }
+  
+    #drop-area {
+      height: 180px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .flex-examples {
+      flex-direction: row;
+    }
+  
+    #examples-h1 {
+      font-size: 3rem;
+    }
+  
+    #charts-main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #charts-main canvas {
+      width: 45vw;
+      max-width: 600px;
+    }
+  }
